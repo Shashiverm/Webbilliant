@@ -109,8 +109,12 @@ export default function Component() {
     </div>
   )
 }
-
-function ServiceCard({ icon, title, description }) {
+interface TeamCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+function ServiceCard({ icon, title, description }:TeamCardProps) {
   return (
     <Card>
       <CardHeader>
