@@ -119,7 +119,7 @@ export default function Component() {
                   Ready to Work with Us?
                 </h2>
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Let's bring your vision to life. Our team is ready to tackle your next project with creativity and expertise.
+                  Let&&pos;s bring your vision to life. Our team is ready to tackle your next project with creativity and expertise.
                 </p>
               </div>
               <div className="space-x-4">
