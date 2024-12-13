@@ -145,7 +145,13 @@ export default function Component() {
   )
 }
 
-function TeamCard({ icon, title, description }) {
+interface TeamCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+function TeamCard({ icon, title, description }: TeamCardProps) {
   return (
     <Card>
       <CardHeader>
