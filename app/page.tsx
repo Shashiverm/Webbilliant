@@ -67,7 +67,7 @@ export default function Component() {
                   Ready to get started?
                 </h2>
                 <p className="mx-auto max-w-[600px] text-white md:text-xl">
-                  Let's bring your digital vision to life. Contact us today for a free consultation.
+                  Let&apos;s bring your digital vision to life. Contact us today for a free consultation.
                 </p>
               </div>
               <div className="space-x-4">

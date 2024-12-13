@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
+//import Image from 'next/image'
 
 export default function Component() {
   return (
@@ -36,7 +37,7 @@ export default function Component() {
                   Contact Us
                 </h1>
                 <p className="mx-auto max-w-[700px] text-white md:text-xl">
-                  We're here to help. Reach out to us for any inquiries or support.
+                  Were here to help. Reach out to us for any inquiries or support.
                 </p>
               </div>
             </div>
@@ -48,7 +49,7 @@ export default function Component() {
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Get in Touch</h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and well get back to you as soon as possible.
                 </p>
                 <form className="space-y-4">
                   <Input placeholder="Your Name" />
@@ -84,11 +85,13 @@ export default function Component() {
                   </CardHeader>
                   <CardContent>
                     <div className="aspect-[16/9] overflow-hidden rounded-lg">
-                      <img
+                      {/* <image
                         src="/placeholder.svg?height=400&width=800"
                         alt="Map"
+                        width={800}
+                        height={400}
                         className="object-cover w-full h-full"
-                      />
+                      /> */}
                     </div>
                   </CardContent>
                 </Card>

@@ -56,7 +56,7 @@ export default function Component() {
               <ServiceCard
                 icon={<Palette className="h-10 w-10" />}
                 title="Graphics/Logo Design"
-                description="Eye-catching visuals to represent your brand. Our designers create unique logos and graphics that capture your brand's essence and leave a lasting impression."
+                description="Eye-catching visuals to represent your brand. Our designers create unique logos and graphics that capture your brand&apos;s essence and leave a lasting impression."
               />
               <ServiceCard
                 icon={<Video className="h-10 w-10" />}
@@ -84,7 +84,7 @@ export default function Component() {
                   Ready to Transform Your Digital Presence?
                 </h2>
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Let's discuss how our services can help you achieve your goals. Contact us for a free consultation.
+                  Let&apos;s discuss how our services can help you achieve your goals. Contact us for a free consultation.
                 </p>
               </div>
               <div className="space-x-4">

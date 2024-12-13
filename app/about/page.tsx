@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Laptop, Smartphone, Palette, Video, Camera, Calendar } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
+// import Image from "next/image"
 
 export default function Component() {
   return (
@@ -48,14 +48,14 @@ export default function Component() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Story</h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Webbilliant was founded with a vision to bridge the gap between cutting-edge technology and creative
-                  design. Our journey began in 2010, and since then, we've been at the forefront of digital innovation,
+                  design. Our journey began in 2010, and since then, we&apos;ve been at the forefront of digital innovation,
                   helping businesses of all sizes establish and enhance their online presence.
                 </p>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Today, we're proud to offer a comprehensive suite of services, from web development and app management
+                  Today, we&apos;re proud to offer a comprehensive suite of services, from web development and app management
                   to graphic design and event planning. Our diverse team of experts brings a wealth of experience and
                   creativity to every project, ensuring that we deliver solutions that not only meet but exceed our
-                  clients' expectations.
+                  clients&apos; expectations.
                 </p>
               </div>
               <div className="space-y-4">
