@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 import { Laptop, Smartphone, Palette, Video, Camera, Calendar } from "lucide-react"
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
 // import Image from "next/image"
 
@@ -130,16 +132,80 @@ export default function Component() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500">© 2023 Webbilliant. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
+      <footer className="bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Webbilliant</h3>
+              <p className="text-sm text-gray-400">Empowering businesses with innovative digital solutions</p>
+              <div className="flex space-x-4">
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  <Facebook size={20} />
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  <Twitter size={20} />
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  <Instagram size={20} />
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  <Linkedin size={20} />
+                </Link>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Newsletter</h3>
+              <p className="text-sm text-gray-400">Stay updated with our latest news and offers</p>
+              <form className="flex">
+                <Input
+                  type="email"
+                  placeholder="Your email"
+                  className="rounded-r-none bg-gray-800 border-gray-700 text-white"
+                />
+                <Button type="submit" className="rounded-l-none bg-primary hover:bg-primary/90">
+                  Subscribe
+                </Button>
+              </form>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Quick Links</h3>
+              <nav className="flex flex-col space-y-2 text-sm">
+                <Link href="" className="text-gray-400 hover:text-white">
+                  Home
+                </Link>
+                <Link href="services" className="text-gray-400 hover:text-white">
+                  Services
+                </Link>
+                <Link href="about" className="text-gray-400 hover:text-white">
+                  About Us
+                </Link>
+                <Link href="contact" className="text-gray-400 hover:text-white">
+                  Contact
+                </Link>
+              </nav>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Legal</h3>
+              <nav className="flex flex-col space-y-2 text-sm">
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Privacy Policy
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Terms of Service
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Cookie Policy
+                </Link>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Disclaimer
+                </Link>
+              </nav>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
+            <p>© 2023 Webbilliant. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   )

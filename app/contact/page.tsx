@@ -105,7 +105,7 @@ export default function Component() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Webbilliant</h3>
-              <p className="text-sm text-gray-400">Empowering businesses with innovative digital solutions since 2010</p>
+              <p className="text-sm text-gray-400">Empowering businesses with innovative digital solutions</p>
               <div className="flex space-x-4">
                 <Link href="#" className="text-gray-400 hover:text-white">
                   <Facebook size={20} />
