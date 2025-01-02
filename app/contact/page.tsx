@@ -1,12 +1,34 @@
+'use client'
+
+import { useFormState } from 'react-dom'
+import { submitContact } from '../actions/contact'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 import Link from "next/link"
-//import Image from 'next/image'
+import { useEffect } from 'react'
+import { toast } from "sonner"
 
-export default function Component() {
+const initialState = {
+  message: '',
+  success: false
+}
+
+export default function ContactPage() {
+  const [state, formAction] = useFormState(submitContact, initialState)
+
+  useEffect(() => {
+    if (state.message) {
+      if (state.success) {
+        toast.success(state.message)
+      } else {
+        toast.error(state.message)
+      }
+    }
+  }, [state])
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-14 flex items-center">
@@ -37,7 +59,7 @@ export default function Component() {
                   Contact Us
                 </h1>
                 <p className="mx-auto max-w-[700px] text-white md:text-xl">
-                  Were here to help. Reach out to us for any inquiries or support.
+                  We&apos;re here to help. Reach out to us for any inquiries or support.
                 </p>
               </div>
             </div>
@@ -49,14 +71,17 @@ export default function Component() {
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Get in Touch</h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Fill out the form below and well get back to you as soon as possible.
+                  Fill out the form below and we&apos;ll get back to you as soon as possible.
                 </p>
-                <form className="space-y-4">
-                  <Input placeholder="Your Name" />
-                  <Input type="email" placeholder="Your Email" />
-                  <Input placeholder="Subject" />
-                  <Textarea placeholder="Your Message" />
-                  <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                <form action={formAction} className="space-y-4">
+                  <Input name="name" placeholder="Your Name" required />
+                  <Input type="email" name="email" placeholder="Your Email" required />
+                  <Input name="subject" placeholder="Subject" required />
+                  <Textarea name="message" placeholder="Your Message" required />
+                  <Button 
+                    type="submit" 
+                    className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
                     Send Message
                   </Button>
                 </form>
@@ -67,7 +92,7 @@ export default function Component() {
                   <CardContent className="p-6 space-y-4">
                     <div className="flex items-center space-x-4">
                       <MapPin className="text-primary" />
-                      <span>123 Web Street, Digital City, 12345</span>
+                      <span>Bypass&lsquo; Gaya&lsquo;&lsquo; 823001</span>
                     </div>
                     <div className="flex items-center space-x-4">
                       <Phone className="text-primary" />
@@ -85,13 +110,10 @@ export default function Component() {
                   </CardHeader>
                   <CardContent>
                     <div className="aspect-[16/9] overflow-hidden rounded-lg">
-                      {/* <image
-                        src="/placeholder.svg?height=400&width=800"
-                        alt="Map"
-                        width={800}
-                        height={400}
-                        className="object-cover w-full h-full"
-                      /> */}
+                      {/* Map placeholder */}
+                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                        <span className="text-gray-500">Map Placeholder</span>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -178,3 +200,4 @@ export default function Component() {
     </div>
   )
 }
+

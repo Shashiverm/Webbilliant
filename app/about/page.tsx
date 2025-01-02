@@ -37,7 +37,7 @@ export default function Component() {
                   About Webbilliant
                 </h1>
                 <p className="mx-auto max-w-[700px] text-white md:text-xl">
-                  Empowering businesses with innovative digital solutions since 2010
+                  Empowering businesses with innovative digital solutions
                 </p>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function Component() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Story</h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Webbilliant was founded with a vision to bridge the gap between cutting-edge technology and creative
-                  design. Our journey began in 2010, and since then, we&apos;ve been at the forefront of digital innovation,
+                  design.We&apos;ve been at the forefront of digital innovation,
                   helping businesses of all sizes establish and enhance their online presence.
                 </p>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
